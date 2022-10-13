@@ -1,2 +1,3 @@
 #!/bin/bash
 gcc -C $CFILE -o $(echo $(echo $CFILE) | tr 'c' 'o')
+gcc -c $CFILE
