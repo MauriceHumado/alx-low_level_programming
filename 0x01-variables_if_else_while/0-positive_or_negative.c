@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
-int main()
+int main(void)
 {
 	int n;
 
@@ -26,7 +27,7 @@ int main()
 	
 	else if (n==0)
 	
-		print ("%d is zero\n", n);
+		printf("%d is zero\n", n);
 	
 	return (0);
 }
