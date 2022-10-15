@@ -7,9 +7,9 @@
  * return: Always 0 (Success)
  */
 
-int main(void)
+void main(void)
 {
-	int n;
+	void n;
 
 	srand(time(0));
 
