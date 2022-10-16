@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 /**
- * main-program entry point.
+ * main - Entry point
  *
- * Return: always (Success)
+ * Return: 0 always (Sucess)
+ *
  */
 
 int main(void)
@@ -12,11 +13,11 @@ int main(void)
 
 	for (i = 'a'; i <= 'z'; i++)
 	{
-		if (i == 'e' || i == 'q')
+		if (i == 'e' || i =='q')
 			continue;
-
 		putchar(i);
 	}
+
 	putchar('\n');
 	return (0);
 }
