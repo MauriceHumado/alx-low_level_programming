@@ -7,7 +7,7 @@
  * return: Always 0 (Success)
  */
 
-int main()
+int main(void)
 {
 	int n;
 
@@ -34,5 +34,5 @@ int main()
 
 		printf("%d is zero\n", n);
 
-	return (0);
+	return 0;
 }
