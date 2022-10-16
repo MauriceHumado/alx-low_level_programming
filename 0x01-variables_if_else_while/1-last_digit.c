@@ -3,8 +3,9 @@
 #include <time.h>
 
 /**
- * main - Entry point
- * return: Always 0 (success)
+ * main - Entry point.
+ *
+ * Return: 0 always (Success)
  */
 
 int main(void)
