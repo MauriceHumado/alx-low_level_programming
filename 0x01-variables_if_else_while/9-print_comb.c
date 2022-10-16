@@ -1,8 +1,10 @@
 #include <stdio.h>
+
 /**
  * main- Entry point.
- * return:0 Success
+ * Return: 0 always (Success)
  */
+
 int main(void)
 {
 	int num;
