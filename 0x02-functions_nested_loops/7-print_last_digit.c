@@ -8,7 +8,7 @@
  * @x: last digit
  */
 
-int print_last_digit(void)
+int print_last_digit(int n)
 {
 	int n;
 
