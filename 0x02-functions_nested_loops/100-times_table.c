@@ -20,12 +20,12 @@ void print_times_table(int n)
 		{
 			_putchar('0');
 
-			j = 1;
+			y = 1;
 
-			for (; j <= n; j++)
-				putformat(i * j++);
-			for (j = 1; j <= n; j++)
-				putformat(i * j);
+			for (; y <= n; y++)
+				putformat(x * y++);
+			for (y = 1; y <= n; y++)
+				putformat(x * y);
 			_putchar('\n');
 		}
 	}
