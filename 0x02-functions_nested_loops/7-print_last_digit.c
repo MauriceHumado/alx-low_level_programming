@@ -8,16 +8,14 @@
  * @x: last digit
  */
 
-int print_last_digit(int x)
+int print_last_digit(int n)
 {
 	int x = n % 10;
 
 	if (x < 0)
 		x = -1 * (n % 10);
-	else
-		x = n % 10;
 
 	_putchar(x + '0');
 
-	return (x);
+	return (n % 10);
 }
