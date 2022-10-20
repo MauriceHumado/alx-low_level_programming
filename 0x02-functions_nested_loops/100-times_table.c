@@ -23,9 +23,9 @@ void print_times_table(int n)
 			y = 1;
 
 			for (; y <= n; y++)
-				putformat(x * y++);
+				_putchar(x * y++);
 			for (y = 1; y <= n; y++)
-				putformat(x * y);
+				_putchar(x * y);
 			_putchar('\n');
 		}
 	}
