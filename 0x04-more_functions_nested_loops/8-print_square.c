@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_square - prints a square
@@ -8,21 +7,18 @@
 
 void print_square(int size)
 {
-	if (sqr <= 0)
-	{
-		_putchar('\n');
-	}
-	else
-	{
-		int a, b;
+	int hgt, wid;
 
-		for (a = 0; a < sqr; a++)
+	if (size > 0)
+	{
+		for (hgt = 0; hgt < size; hgt++)
 		{
-			for (b = 0; b < sqr; b++)
-			{
+			for (wid = 0; wid < size; wid++)
 				_putchar('#');
-			}
-			_putchar('n\')
+
+			if (hgt == size - 1)
+				continue;
+			_putchar('\n');
 		}
 	}
 }
