@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_diagonal - draw a diagonal line with \
@@ -7,18 +6,20 @@
  */
 void print_diagonal(int n)
 {
-	int a, b;
-
 	if (n > 0)
+
+	int len, space;
+
 	{
-		for (a = 0; a < n; a++)
+		for (len = '0'; len < n; len++)
 		{
-			for (b = 0; b < a; b++)
+			for (space = '0'; space < len; space++)
 				_putchar(' ');
 			_putchar('\\');
 
-			if (a == n - 1)
+			if (len == n - '1')
 				continue;
+
 			_putchar('\n');
 		}
 	}
