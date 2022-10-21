@@ -1,11 +1,13 @@
 #include "main.h"
 
 /**
- * print_diagonal - draw a diagonal line with \
- * @n: number of times '\' should be printed
+ * print_diagonal - draw a diagonal line with '\'
+ * @n: number of '\'
  */
 void print_diagonal(int n)
 {
+	int n;
+
 	if (n > 0)
 
 	int len, space;
