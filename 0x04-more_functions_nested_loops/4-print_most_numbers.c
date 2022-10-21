@@ -4,22 +4,21 @@
 /**
  * print_most_numbers - print numbers zero to nine except two and four
  * Return: 0 to 9, except 2 and 4
- * @x: the number
  */
 
 void print_most_numbers(void)
 {
-	int x = 0;
+	int e;
 
-	for (; x <= 9; x++)
+	for (e = 0; e <= 9; e++)
 	{
-		if (x == 2 || x == 4)
+		if (e == 2 || e == 4)
 		{
 			continue;
 		}
 		else
 		{
-			_putchar(x + '0');
+			_putchar(e + '0');
 		}
 	}
 	_putchar('\n');
