@@ -6,9 +6,7 @@
  */
 void print_diagonal(int n)
 {
-	int n;
-
-	int len, space;
+	int n, len, space;
 
 	if (n > 0)
 
