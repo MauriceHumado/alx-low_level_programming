@@ -4,15 +4,15 @@
 /**
  * _isdigit - checks for digit zero through nine
  * Return: 1 if digit otherwise 0
- * @c: input
+ * @c: number
  */
 
 int _isdigit(int c)
 {
-	if (c >= 48 && c <= 58)
-	{
-		return (1);
-	}
+	int y = 0;
 
-	return (0);
+	if (c >= '0' && c <= '9')
+		y = 1;
+
+	return (y);
 }
