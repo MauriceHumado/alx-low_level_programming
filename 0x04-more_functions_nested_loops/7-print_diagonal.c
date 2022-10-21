@@ -4,6 +4,7 @@
  * print_diagonal - draw a diagonal line with '\'
  * @n: number of '\'
  */
+
 void print_diagonal(int n)
 {
 	int n, len, space;
@@ -15,7 +16,7 @@ void print_diagonal(int n)
 		{
 			for (space = 0; space < len; space++)
 				_putchar(' ');
-			_putchar(92);
+			_putchar('\\');
 
 			if (len == n - 1)
 				continue;
