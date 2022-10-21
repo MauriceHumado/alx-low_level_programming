@@ -1,22 +1,23 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_diagonal - draw a diagonal line
  * @n: number of times '\' should be printed
+ * must end with new line
+ * Return: \ if n > 0 else \n
  */
 
 void print_diagonal(int n)
 {
-	int a, b;
+	int x, y;
 
 	if (n <= 0)
 		_putchar('\n');
 
-	for (a = 0; a < n; a++)
+	for (x = 0; x < n; x++)
 	{
-		for (b = 0; b < a; b++)
-			_puthcar(' ');
+		for (y = 0; y < x; y++)
+			_putchar(' ');
 
 		_putchar('\\');
 		_putchar('\n');
