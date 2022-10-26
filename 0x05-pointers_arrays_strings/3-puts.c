@@ -5,14 +5,17 @@
 /**
  * _puts - prints a string then a newline to stdout
  * @str: string input
- * Return: string
+ * Return: void
  */
 
 void _puts(char *str)
 {
-	for (; *str != '\0'; str++)
+	int i = 0;
+
+	while (*(str + i))
 	{
-		_putchar(*str);
+		_putchar(*(str + i));
+		i++;
 	}
 	_putchar('\n');
 }
