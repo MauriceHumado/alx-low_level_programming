@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <unistd.h>
 
 /**
  * puts_half - prints half of a string, then new line
