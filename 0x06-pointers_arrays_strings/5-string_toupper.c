@@ -3,10 +3,10 @@
 /**
  * string_toupper - changes all lowercase letters of a string to uppercase
  * @s: an input string
- * Return: char pointer to converted string
+ * Return: uppercase string
  */
 
-char *string_toupper(char *)
+char *string_toupper(char *n)
 {
 	int i;
 
@@ -16,7 +16,6 @@ char *string_toupper(char *)
 		{
 			n[i] = n[i] - 32;
 		}
-		n++
 	}
 	return (n);
 }
