@@ -2,13 +2,13 @@
 
 /**
  * _strncpy - copies a string
- * @dest: copy to
- * @src: copy from
- * @n: input number of char
- * Return: Always 0 (Success)
+ * @dest: destination string
+ * @src: source string
+ * @n: number of bytes of src
+ * Return: pointer to dest
  */
 
-char *_strncpy(char *dest, char *src, int n);
+char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
 
