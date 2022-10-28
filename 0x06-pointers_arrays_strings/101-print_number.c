@@ -3,7 +3,7 @@
 /**
  * print_number - prints an integer with putchar
  * @n: Number to print
- * Return: 0
+ * Return: nothing
  */
 
 void print_number(int n)
