@@ -8,17 +8,23 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i, sum, sqr;
+	int i, j;
+	int c = 0;
+	int d = 0;
 
-	i = 0;
-	sum = 0;
-	sqr = size * size;
-
-	while (i < sqr)
+	for (i = 0; i < size; i++)
 	{
-		if (i % (size + 1) == 0)
-			sum += a[i];
-		i++;
+		c = c + *(a + i * sizeof(int));
+		c += a[i];
+		d += a[size - i - 1];
+		a += size;
 	}
-	printf("%d, ", sum);
+
+	for (j = 0; j < size; j++)
+	{
+		d = d + *(a + (size * j) + (size - j - 1));
+	}
+	printf("%d, %d\n", c, d);
+	printf("%d, ", c);
+	printf("%d\n", d);
 }
