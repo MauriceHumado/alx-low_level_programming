@@ -19,7 +19,7 @@ int chk_prime(int i, int j)
 		return (0);
 	}
 
-	return (is_prime(i, j - 1));
+	return (chk_prime(i, j - 1));
 }
 
 /**
@@ -35,5 +35,5 @@ int is_prime_number(int n)
 		return (0);
 	}
 
-	return (is_prime(n, n - 1));
+	return (chk_prime(n, n - 1));
 }
