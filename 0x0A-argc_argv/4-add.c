@@ -12,15 +12,10 @@ int main(int argc, char *argv[])
 {
 	int num, sum = 0;
 
-	for num = " "
-		printf("0\n");
-
 	for (num = 1; num < argc; num++)
 	{
 		if (atoi(argv[num]) != 0)
-		{
 			sum += atoi(argv[num]);
-		}
 		else
 		{
 			printf("Error\n");
