@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
  * main - Prints the addition of positive numbers
- * @argc: The number of arguments passed to the program
+ * @argc: The number of arguments passed to the function
  * @argv: An array of pointers to the arguments
  * Return: 0 if digits passed else 1
  */
@@ -15,7 +15,9 @@ int main(int argc, char *argv[])
 	for (num = 1; num < argc; num++)
 	{
 		if (atoi(argv[num]) != 0)
+		{
 			sum += atoi(argv[num]);
+		}
 		else
 		{
 			printf("Error\n");
