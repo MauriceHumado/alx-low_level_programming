@@ -3,28 +3,27 @@
 #include <ctype.h>
 /**
  * main - Prints the addition of positive numbers
- * @argc: The number of arguments passed to the function
- * @argv: An array of pointers to the arguments
- * Return: 0 if digits passed else 1
+ * @argc: number of command line arguments
+ * @argv: array that contains the program command line arguments.
+ * Return: 0 to success
  */
 
 int main(int argc, char *argv[])
 {
-	int num, sum = 0;
+	int i, j, add = 0;
 
-	for (num = 1; num < argc; num++)
+	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[num]) != 0)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			sum += atoi(argv[num]);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		add += atoi(argv[i]);
 	}
-
-	printf("%d\n", sum);
+	printf("%d\n", add);
 	return (0);
 }
