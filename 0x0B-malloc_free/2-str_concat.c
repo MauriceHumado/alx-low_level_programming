@@ -41,11 +41,15 @@ char *str_concat(char *s1, char *s2)
 	for (; i < (lens1 + lens2); i++)
 	{
 		if (i < lens1)
+		{
 			new_str[i] = *s1;
-			s1++;
+		}
+		s1++;
 		else
+		{
 			new_str[i] = *s2;
-			s2++;
+		}
+		s2++;
 	}
 
 	new_str[i] = '\0';
