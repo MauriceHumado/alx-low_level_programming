@@ -1,11 +1,13 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * _realloc - reallocates a memory block
+ * *_realloc - reallocates a memory block
  * @ptr: pointer to previous memory block
- * @old_size: size in bytes of allocated space for `ptr`
- * @new_size: size in bytes for new allocated space
- * Return: Pointer to new memory block, or NULL if error
+ * @old_size: size of ptr
+ * @new_size: size of new memory to be allocated
+ * Return: Pointer to address of new memory block, or NULL if error
  */
 
 
