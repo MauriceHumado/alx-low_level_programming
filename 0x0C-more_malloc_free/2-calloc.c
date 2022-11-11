@@ -1,8 +1,10 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
- * *_calloc - Allocates memory for an array using malloc
+ * _calloc - Allocates memory for an array using malloc
  * @nmemb: The number of memory spaces
  * @size: size of nmemb
  * Return: pointer to allocated space or NULL on failure
@@ -16,7 +18,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	space = malloc(size * nmemb);
+	space = malloc(nmemb * size);
 
 	if (space == NULL)
 		return (NULL);
