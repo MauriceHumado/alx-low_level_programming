@@ -7,39 +7,35 @@
  * @ptr: pointer to previous memory block
  * @old_size: size of ptr
  * @new_size: size of new memory to be allocated
- * Return: Pointer to address of new memory block, or NULL if error
+ * Return: void Pointer to address of new memory block, or NULL if error
  */
 
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *temp_block;
-	unsigned int i;
+	char *new_location, *new_ptr;
+	unsigned int i = 0;
 
+	if (new_size == old_size)
+		return (ptr);
 	if (ptr == NULL)
 	{
-		temp_block = malloc(new_size);
-		return (temp_block);
-	}
-	else if (new_size == old_size)
+		ptr = malloc(new_size);
+		if (ptr == NULL)
+			return (NULL);
 		return (ptr);
-
-	else if (new_size == 0 && ptr != NULL)
+	}
+	if (new_size == 0 && ptr)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	else
-	{
-		temp_block = malloc(new_size);
-		if (temp_block != NULL)
-		{
-			for (i = 0; i < min(old_size, new_size); i++)
-				*((char *)temp_block + i) = *((char *) ptr + i);
-			free(ptr);
-			return (temp_block);
-		}
-		else
-			return (NULL);
-	}
+	new_location = malloc(new_size);
+	new_ptr = ptr;
+	if (old_size > new_size)
+		old_size = new_size;
+	for (i = 0; i < old_size; i++)
+		new_location[i] = new_ptr[i];
+	free(ptr);
+	return (new_location);
 }
