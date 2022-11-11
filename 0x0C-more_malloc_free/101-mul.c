@@ -7,10 +7,10 @@
  * main - Check the code
  * @argc: number of arguments
  * @argv: arguments
- * Return: nothing;
+ * Return: 0 on success
  */
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int num1, num2, result;
 
@@ -25,5 +25,6 @@ void main(int argc, char *argv[])
 		num2 = atoi(argv[2]);
 		result = (num1) * (num2);
 		printf("%d\n", result);
+		return (0);
 	}
 }
