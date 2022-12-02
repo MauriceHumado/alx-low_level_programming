@@ -3,6 +3,45 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+
+/**
+ * _strlen - gets the lenght of input strings
+ * @str: input string
+ * Return: len of the string
+ */
+
+int _strlen(const char *str)
+{
+	int len = 0;
+
+	while (*str)
+	{
+		len++;
+		str++;
+	}
+	return (len);
+}
+
+/**
+ * _to_power - prints the power of numbers
+ * @base: base parameter
+ * @power: power parameter
+ * Return: product of two numbers
+ */
+
+int _to_power(const int base, int power)
+{
+	int product = 1;
+
+	while (power > 1)
+	{
+		product *= base;
+		power++;
+	}
+	return (product);
+}
+
+
 /**
  * binary_to_uint - converts a binary to an unsigned int
  * @b: the binary number as a string
@@ -11,40 +50,27 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal = 0;
-	int str_len = 0, base = 1;
+	int power, num;
 
-	if (!check_valid_string(b))
-		return (0);
+	power = _strlen(b) - 1;
+	num = 0;
 
-	while (b[str_len] != '\0')
-		str_len++;
-
-	while (str_len)
+	if (!b)
 	{
-		decimal += ((b[str_len - 1] - '0') * base);
-		base *= 2;
-		str_len--;
-	}
-	return (decimal);
-}
-
-/**
- * check_valid_string - checks if a string has only 0's and 1's
- * @b: string to be checked
- * Return: 1 if string is valid, 0 otherwise
- */
-
-int check_valid_string(const char *b)
-{
-	if (b == NULL)
 		return (0);
-
+	}
 	while (*b)
 	{
-		if (*b != '1' && *b != '0')
+		if (!(*b == '0' || *b == '1'))
+		{
 			return (0);
+		}
+		if (*b == '1')
+		{
+			num += _to_power(2, power);
+		}
 		b++;
+		power--;
 	}
-	return (1);
+	return (num);
 }
