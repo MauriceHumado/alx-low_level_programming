@@ -20,4 +20,6 @@ int safe_close(int);
 void write_error(char *);
 void read_error(char *);
 int main(int argc, char *argv[]);
+int main(int ac, char **av);
+
 #endif
