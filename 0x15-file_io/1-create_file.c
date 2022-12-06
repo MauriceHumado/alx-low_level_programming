@@ -9,9 +9,9 @@
 
 /**
  * create_file - creates a file
- * @filename: A pointer to the name of the file to create
- * @text_content: A pointer to a string to write to the file
- * Return: On Success 1, else if function fails -1
+ * @filename: The filename to create
+ * @text_content: A NULL terminated string to write to the file
+ * Return: On Success 1, else -1 if failure
  */
 
 int create_file(const char *filename, char *text_content)
@@ -33,4 +33,5 @@ int create_file(const char *filename, char *text_content)
 
 	if (error < 0)
 		return (-1);
+	return (1);
 }
