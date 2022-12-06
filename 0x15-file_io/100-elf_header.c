@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <elf.h>
 
 /**
  * main - entry point for program to get header of ELF file
