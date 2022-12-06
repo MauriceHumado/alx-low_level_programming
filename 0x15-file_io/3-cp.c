@@ -6,6 +6,8 @@
 #include <sys/stat.h>
 #include <sys/uio.h>
 #include <fcntl.h>
+#define SE STDERR_FILENO
+#define MAXSIZE 1204
 
 /**
  * main - Main function to copy files
