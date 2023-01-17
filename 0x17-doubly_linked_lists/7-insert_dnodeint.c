@@ -1,4 +1,8 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
 
 /**
  * insert_dnodeint_at_index - insert node at given position in dlistint_t list
